@@ -8,7 +8,9 @@ module.exports = {
 				'dark-red': '#ED2626',
 				'black': '#0B0B0B',
 				'light-black': '#262020',
+				'dark-bg':'#1D232A',
 				'white': '#FFFAFA',
+
 			},
 			spacing: {
 				'px': '1px',
@@ -23,8 +25,11 @@ module.exports = {
 		fontFamily: {
 			'roboto': ['Roboto', 'sans'],
 		},
+		fontSize: {
+			"large": "2rem",
+		},
 	},
 	plugins: [
-		require("daisyui"),
+		require("@tailwindcss/typography"), require("daisyui"),
 	],
 }
