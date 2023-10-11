@@ -10,6 +10,7 @@ module.exports = {
 				'light-black': '#262020',
 				'dark-bg':'#1D232A',
 				'white': '#FFFAFA',
+				'gray': '#EEEEEE',
 
 			},
 			spacing: {
@@ -20,14 +21,15 @@ module.exports = {
 				'8': '2rem',
 				'12': '3rem',
 				'32': '8rem',
-			}
+			},
+			fontSize: {
+				"large": "2rem",
+			},
 		},
 		fontFamily: {
-			'roboto': ['Roboto', 'sans'],
+			'serif': ['Young Serif', 'serif']
 		},
-		fontSize: {
-			"large": "2rem",
-		},
+		
 	},
 	plugins: [
 		require("@tailwindcss/typography"), require("daisyui"),

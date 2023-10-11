@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import 'https://fonts.googleapis.com/css2?family=Young+Serif&display=swap';
 
 /* Import Tailwind CSS */
 @import 'tailwindcss/base';
@@ -7,9 +8,44 @@
 
  /* Use Tailwind CSS utility classes for styling */
 body {
-   @apply font-roboto m-0;
+   @apply flex flex-col m-0;
 }
 
 h1 {
    @apply text-large;
+}
+
+h2 {
+   @apply text-large;
+}
+
+label {
+   @apply text-black font-bold text-xl;
+}
+
+input {
+   @apply input bg-light-red w-1/2 text-white;
+   
+   &::-webkit-input-placeholder {
+      @apply text-gray;
+    }
+    &:-moz-placeholder {
+      @apply text-gray opacity-100;
+    }
+    &::-moz-placeholder {
+      color: text-gray opacity 100;
+    }
+    &:-ms-input-placeholder {
+      @apply text-gray;
+    }
+    &::-ms-input-placeholder {
+      @apply text-gray;
+    }
+    &::placeholder {
+      @apply text-gray;
+    }
+}
+
+button {
+   @apply btn bg-light-red text-white w-1/2 m-auto shadow-lg hover:bg-inherit hover:text-black hover:scale-105;
 }

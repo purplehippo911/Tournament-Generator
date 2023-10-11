@@ -1,17 +1,40 @@
 ---
-
 // Component Imports
 import MainLayout from '../layouts/MainLayout.astro';
-
-const someProps = {
-	count: 0,
-};
+import PlayerInput from "../components/PlayerInput"
 ---
 
-<MainLayout title="Home Page">
-  <div class="card p-8">
-    <p>My page content, wrapped in a layout!</p>
-  </div>
+<MainLayout title="Home Page" class="prose">
+  <article class="p-8">
+    <div class="container grid gap-4 text-center md:margin-0-auto">
+      <h2 class="text-large text-light-red font-bold">Make a tournament</h2>
+        
+        <section class="card">
+          <div class="flex flex-col items-center">
+            <label for="" class="">Tournament Name</label>
+            <input type="text" placeholder="Ex:Super Smash Bros" class="">
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="flex flex-col items-center">
+            <label for="" class="">Rounds</label>
+            <input type="number" placeholder="Number of Rounds" class="">
+          </div>
+        </section>
+
+        <section class="h-1/5">
+          <div class="flex flex-col items-center gap-4">
+            <label for="" class="">Participants/Team Name</label>
+            <input type="text"placeholder="Participant/team Name" class="" id="input-players">
+            <PlayerInput/>
+          </div>
+        </section>
+
+      <button class="w-fit">Generate Tournament</button>
+
+    </div>
+  </article>
 </MainLayout>
 
 			

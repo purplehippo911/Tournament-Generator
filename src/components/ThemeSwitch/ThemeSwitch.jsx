@@ -25,7 +25,7 @@ const ThemeSwitch = () => {
   }, []);
 
   return (
-      <label class="theme-switch">
+      <label class="theme-switch" onClick={() => console.log("clicked")}>
       <input type="checkbox" class="theme-switch__checkbox" id='dark-mode-toggle'/>
       <div class="theme-switch__container">
         <div class="theme-switch__clouds"></div>
