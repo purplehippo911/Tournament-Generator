@@ -9,7 +9,7 @@ const ThemeSwitch = () => {
 
   // Use useEffect to listen for changes in the checkbox state
   useEffect(() => {
-    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const darkModeToggle = document.querySelector("#dark-mode-toggle");
 
     if (darkModeToggle) {
       darkModeToggle.addEventListener('checked', toggleDarkMode);
