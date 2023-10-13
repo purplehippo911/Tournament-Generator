@@ -13,11 +13,11 @@ import Navbar from "../components/Navbar.jsx";
         <title> {title} </title>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	</head>
-	<body class="relative">
+	<body class="relative min-h-[100vh]">
         <Navbar/>
 		
-        <main class="bg-white mb-10">
-            <slot />
+        <main class="flex flex-col relative">
+            <slot class="" />
         </main>
 
 		<Footer />

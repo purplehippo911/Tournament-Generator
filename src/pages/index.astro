@@ -5,7 +5,7 @@ import PlayerInput from "../components/PlayerInput"
 ---
 
 <MainLayout title="Home Page" class="prose">
-  <article class="p-8">
+  <form class="p-8" onsubmit=`{(e) => e.preventDefault()}`>
     <div class="container grid gap-4 text-center md:margin-0-auto">
       <h2 class="text-large text-light-red font-bold">Make a tournament</h2>
         
@@ -29,8 +29,8 @@ import PlayerInput from "../components/PlayerInput"
           </div>
         </section>
 
-      <button class="w-fit">Generate Tournament</button>
+      <button class="w-fit" onclick=`{() => submit()} onsubmit="{(e) => e.preventDefault()}"`>Generate Tournament</button>
 
     </div>
-  </article>
+  </form>
 </MainLayout>
