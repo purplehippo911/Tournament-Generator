@@ -1,10 +1,9 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-
 ---
 <MainLayout> 
-    <article class="prose bg-black w-full h-[80vh] flex flex-col items-center justify-center self-center absolute">
-        <h1>Generating Tournament...</h1>
+    <article class="bg-black w-full h-[80vh] flex flex-col items-center justify-center self-center absolute">
+        <h1 class="text-[2.5rem] text-white mb-10">Generating Tournament...</h1>
         <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
             <div class="wheel"></div>
             <div class="hamster">
@@ -27,12 +26,13 @@ import MainLayout from "../layouts/MainLayout.astro";
 </MainLayout>
 
 <style>
-    .wheel-and-hamster {
+.wheel-and-hamster {
   --dur: 1s;
   position: relative;
-  width: 20em;
-  height: 20em;
+  width: 30em;
+  height: 30em;
   font-size: 14px;
+  margin-bottom: 4rem;
 }
 
 .wheel,
@@ -58,11 +58,12 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 .hamster {
   animation: hamster var(--dur) ease-in-out infinite;
-  top: 50%;
-  left: calc(50% - 3.5em);
-  width: 7em;
-  height: 3.75em;
+  top: 75%;
+  left: calc(50% - 2.5em);
+  width: 10em;
+  height: 5.75em;
   transform: rotate(4deg) translate(-0.8em,1.85em);
+  scale: 1.3;
   transform-origin: 50% 0;
   z-index: 1;
 }

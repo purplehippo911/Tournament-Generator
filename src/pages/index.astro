@@ -2,35 +2,43 @@
 // Component Imports
 import MainLayout from '../layouts/MainLayout.astro';
 import PlayerInput from "../components/PlayerInput"
+import Astro from "@astrojs/react"
 ---
 
 <MainLayout title="Home Page" class="prose">
-  <form class="p-8" onsubmit=`{(e) => e.preventDefault()}`>
+  <form class="p-8" onsubmit=`{() => handleSubmit(e)}`>
     <div class="container grid gap-4 text-center md:margin-0-auto">
       <h2 class="text-large text-light-red font-bold">Make a tournament</h2>
         
-        <section class="card">
-          <div class="flex flex-col items-center">
-            <label for="" class="">Tournament Name</label>
-            <input type="text" placeholder="Ex: Super Smash Bros" id="input-tournament-name">
-          </div>
-        </section>
+      <section class="card">
+        <div class="flex flex-col items-center">
+          <label for="tournament name" id="tournament-name">Tournament Name</label>
+          <input type="text" placeholder="Ex: Super Smash Bros" id="input-tournament-name">
+        </div>
+      </section>
 
-        <section class="card">
-          <div class="flex flex-col items-center">
-            <label for="" class="">Rounds</label>
-            <input type="number" placeholder="Number of Rounds" id="input-rounds">
-          </div>
-        </section>
+      <section class="card">
+        <div class="flex flex-col items-center">
+          <label for="rounds" class="rounds-label">Rounds</label>
+          <input type="number" placeholder="Number of Rounds" id="input-rounds">
+        </div>
+      </section>
 
-        <section class="h-1/5">
-          <div class="flex flex-col items-center gap-4">
-            <PlayerInput/>
-          </div>
-        </section>
+      <section class="h-1/5">
+        <div class="flex flex-col items-center gap-4">
+          <PlayerInput/>
+        </div>
+      </section>
 
-      <button class="w-fit" onclick=`{() => submit()} onsubmit="{(e) => e.preventDefault()}"`>Generate Tournament</button>
+      <button class="w-fit" onclick=`{handleSubmit(e)}`>Generate Tournament</button>
 
     </div>
   </form>
 </MainLayout>
+
+<script>
+  const handleSubmit = (e) => {
+    e.preventDefault;
+    Astro.redirect("/tournament");
+  }
+</script>

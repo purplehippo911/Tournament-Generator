@@ -1,6 +1,6 @@
 import { atom } from 'nanostores'
 
-export const $players = atom(["sdsa", "fdsaf", "fdsaf", "fdsaf", "fdsaf",, "fdsaf",, "fdsaf",, "fdsaf",, "fdsaf",, "fdsaf",, "fdsaf",, "fdsaf",, "fdsaf", "fdsaf", "fdsaf", "fdsaf", "fdsaf",]);
+export const $players = atom(["sdsa", "fdsaf", "fdsaf", "fdsaf", "fdsaf", "fdsaf", "fdsaf", "fdsaf", "fdsaf", "fdsaf", "fdsaf", "fdsaf", "fdsaf", "fdsaf", "fdsaf", "fdsaf", "fdsaf"]);
 
 export function addPlayer(player) {
     $players.set([...$players.get(), player]);
